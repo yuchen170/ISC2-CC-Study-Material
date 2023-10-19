@@ -1,16 +1,15 @@
-# L3 Access Control Concepts
-
+# Access Control
+[TOC]
 ## Introduction
 
-Types of access control, physical and logical controls and how they are combined to strengthen the overall security of an organization.
+**Types of access control, physical and logical controls and how they are combined to strengthen the overall security of an organization.**
 
-## Module 1 Understand Access Control Concepts
+## Access Control Concepts
 
-Domain D3.1, D3.1.3, D3.1.5, D3.2, D3.2.1, D3.2.2, D3.2.5
 
 ### What is Security Control?
 
-Access control involves **limiting what objects can be available to what subjects according to what rules**.
+Access control involves **limiting what ==objects== can be available to what ==subjects== according to what ==rules==**.
 
 ### Controls Overview
 
@@ -30,7 +29,7 @@ Access is based on three elements:
 
 Risk reduction depends on the effectiveness of the control. It must apply to the current situation and adapt to a changing environment. 
 
-### Defense in Depth
+### Defense in Depth 縱深防禦
 
 We are looking at all access permissions including building access, access to server rooms, access to networks and applications and utilities. These are all implementations of access control and are part of **a layered defense strategy**, **also known as defense in depth**, developed by an organization.
 
@@ -38,19 +37,19 @@ We are looking at all access permissions including building access, access to se
 
 A technical example of defense in depth, in which multiple layers of technical controls are implemented, **is when a username and password are required for logging in to your account, followed by a code sent to your phone to verify your identity**. **This is a form of multi-factor authentication using methods on two layers, something you have and something you know.** The combination of the two layers is much more difficult for an adversary to obtain than either of the authentication codes individually. 
 
-Another example of multiple technical layers is when additional firewalls are used to separate untrusted networks with differing security requirements, such as the internet from trusted networks that house servers with sensitive data in the organization. When a company has information at multiple sensitivity levels, it might require the network traffic to be validated by rules on more than one firewall, with the most sensitive information being stored behind multiple firewalls.
+Another example of multiple technical layers is when **additional firewalls are used to separate untrusted networks with differing security requirements, such as the internet from trusted networks that house servers with sensitive data in the organization**. When a company has information at multiple sensitivity levels, it might require the network traffic to be validated by rules on more than one firewall, with the most sensitive information being stored behind multiple firewalls.
 
-For a non-technical example, consider the multiple layers of access required to get to the actual data in a data center. First, a lock on the door provides a physical barrier to access the data storage devices. Second, a technical access rule prevents access to the data via the network. Finally, a policy, or administrative control defines the rules that assign access to authorized individuals.
+For a non-technical example, consider the **multiple layers of access required to get to the actual data in a data center.** First, a lock on the door provides a physical barrier to access the data storage devices. Second, a technical access rule prevents access to the data via the network. Finally, a policy, or administrative control defines the rules that assign access to authorized individuals.
 
-### Principle of Least Privilege
+### Principle of Least Privilege 最小特權原則（PoLP）
 
-The Principle of Least Privilege (NIST SP 800-179) is a standard of permitting only minimum access necessary for users or programs to fulfill their function. Users are provided access only to the systems and programs they need to perform their specific job or tasks. 
+The Principle of Least Privilege is a standard of permitting only minimum access necessary for users or programs to fulfill their function. Users are provided access only to the systems and programs they need to perform their specific job or tasks. 
 
 To preserve the confidentiality of information and ensure that it is only available to personnel who are authorized to see it, **we use privileged access management**, **which is based on the principle of least privilege**. **That means each user is granted access only to the items they need and nothing further**.  
 
 For example, only individuals working in billing will be allowed to view consumer financial data, and even fewer individuals will have the authority to change or delete that data. This maintains confidentiality and integrity while also allowing availability by providing administrative access with an appropriate password or sign-on that proves the user has the appropriate permissions to access that data.  
 
-Sometimes it is necessary to allow users to access the information via a temporary or limited access, for instance, for a specific time period or just within normal business hours. Or access rules can limit the fields that the individuals can have access to. One example is a healthcare environment. Some workers might have access to patient data but not their medical data. Individual doctors might have access only to data related to their own patients. In some cases, this is regulated by law, such as HIPAA in the United States, and by specific privacy laws in other countries. 
+Sometimes it is necessary to allow users to **access the information via a temporary or limited access**, for instance, for a specific time period or just within normal business hours. Or access rules can limit the fields that the individuals can have access to. One example is a healthcare environment. Some workers might have access to patient data but not their medical data. Individual doctors might have access only to data related to their own patients. In some cases, this is regulated by law, such as HIPAA in the United States, and by specific privacy laws in other countries. 
 
 Systems often monitor access to private information, and if logs indicate that someone has attempted to access a database without the proper permissions, that will automatically trigger an alarm. The security administrator will then record the incident and alert the appropriate people to take action.  
 
@@ -77,7 +76,7 @@ Typical measures used for moderating the potential for elevated risks from misus
     * Deeper trust verification than regular user accounts. Privileged account holders should be subject to more detailed background checks, stricter nondisclosure agreements and acceptable use policies, and be willing to be subject to financial investigation. Periodic or event-triggered updates to these background checks may also be in order, depending on the nature of the organization’s activities and the risks it faces. 
     * More auditing than regular user accounts. Privileged account activity should be monitored and audited at a greater rate and extent than regular usage. 
 
-### Segregation of Duties 
+### Segregation of Duties 職責分離(SOD)
 
 A core element of authorization is the **principle of segregation of duties** (also known as separation of duties). **Segregation of duties is based on the security practice that no one person should control an entire high-risk transaction from start to finish**. **Segregation of duties breaks the transaction into separate parts and requires a different person to execute each part of the transaction**. For example, an employee may submit an invoice for payment to a vendor (or for reimbursement to themselves), but it must be approved by a manager prior to payment; in another instance, almost anyone may submit a proposal for a change to a system configuration, but the request must go through technical and management review and gain approval, before it can be implemented.
 
@@ -97,19 +96,14 @@ Other situations that call for provisioning new user accounts or changing privil
 
 * **Separation of employment**: When employees leave the company, depending on company policy and procedures, their accounts must be disabled after the termination date and time. It is recommended that accounts be disabled for a period before they are deleted to preserve the integrity of any audit trails or files that may be owned by the user. Since the account will no longer be used, it should be removed from any security roles or additional access profiles. This protects the company, so the separated employee is unable to access company data after separation, and it also protects them because their account cannot be used by others to access data.
 
-## Module 2: Understand Physical Access Controls
-
-Domain D3.1, D3.1.1, D3.1.2
+## Physical Access Controls
 
 ### What Are Physical Security Controls? 
 
-Physical access controls are items you can physically touch, which include physical mechanisms deployed to prevent, monitor, or detect direct contact with systems or areas within a facility. Examples of physical access controls include security guards, fences, motion detectors, locked doors/gates, sealed windows, lights, cable protection, laptop locks, badges, swipe cards, guard dogs, cameras, mantraps/turnstiles, and alarms.
+Physical access controls are items you can physically touch, which include physical mechanisms deployed to prevent, monitor, or detect direct contact with systems or areas within a facility. Examples of physical access controls include **security guards, fences, motion detectors, locked doors/gates, sealed windows, lights, cable protection, laptop locks, badges, swipe cards, guard dogs, cameras, mantraps/turnstiles, and alarms.**
 
 Physical access controls are necessary to protect the assets of a company, including its most important asset, people. When considering physical access controls, the security of the personnel always comes first, followed by securing other physical assets.
 
-### Why Have Physical Security Controls?
-
-Physical access controls include **fences, barriers, turnstiles, locks and other features that prevent unauthorized individuals from entering a physical site**, such as a workplace. This is to protect not only physical assets such as computers from being stolen, but also to protect the health and safety of the personnel inside. 
 
 ### Types of Physical Access Controls
 
@@ -178,9 +172,8 @@ Another alarm system is a fire alarm, which may be activated by heat or smoke at
 
 Finally, another common type of alarm system is in the form of a panic button. Once activated, a panic button will alert the appropriate police or security personnel.
 
-## Module 3: Understand Logical Access Controls
+## Understand Logical Access Controls
 
-Domain D3.2, D3.2.3, D3.2.4, D3.2.5
 
 ### What are Logical Access Controls?
 
@@ -192,7 +185,7 @@ Whereas physical access controls are tangible methods or mechanisms that limit s
 
 These types of electronic tools limit who can get logical access to an asset, even if the person already has physical access.
 
-#### Discretionary Access Control (DAC)
+#### Discretionary Access Control 自主存取控制(DAC)
 
 Discretionary access control (DAC) is a specific type of access control policy that is **enforced over all subjects and objects in an information system**. In DAC, the policy specifies that **a subject who has been granted access to information can do one or more of the following**:
 
@@ -227,4 +220,3 @@ Role-based access control provides each worker privileges based on what role the
 Monitoring these role-based permissions is important, because if you expand one person’s permissions for a specific reason—say, a junior worker’s permissions might be expanded so they can temporarily act as the department manager—but you forget to change their permissions back when the new manager is hired, then the next person to come in at that junior level might inherit those permissions when it is not appropriate for them to have them. This is called privilege creep or permissions creep. We discussed this before, when we were talking about provisioning new users.  
 
 Having multiple roles with different combinations of permissions can require close monitoring to make sure everyone has the access they need to do their jobs and nothing more. In this world where jobs are ever-changing, this can sometimes be a challenge to keep track of, especially with extremely granular roles and permissions. Upon hiring or changing roles, a best practice is to not copy user profiles to new users. It is recommended that standard roles are established, and new users are created based on those standards rather than an actual user. That way, new employees start with the appropriate roles and permissions. 
-

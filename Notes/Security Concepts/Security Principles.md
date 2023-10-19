@@ -96,7 +96,7 @@ Ensuring that an action is allowed.
 
 Its maintains logs of activity
 
-### Non-repudiation
+### Non-repudiation 不可否認性
 
 Non-repudiation is a legal term and is defined as the protection against an individual falsely denying having performed a particular action. It provides the capability to determine whether a given individual took a particular action, such as created information, approved information or sent or received a message.
 
@@ -122,7 +122,7 @@ Domain D1.2.1, D1.2.2
 
 Risks and security-related issues represent **an ongoing concern** of businesses as well as the field of cybersecurity. Assessing and analyzing risk should be **a continuous and comprehensive** exercise in any organization. As a member of an organization’s security team, you will work through **risk assessment, analysis, mitigation, remediation and communication**.
 
-**Risk ** is  a measure of the extent to which an entity is threatened by a **potential** circumstance or event. It is often expressed as a combination of:
+**Risk** is  a measure of the extent to which an entity is threatened by a **potential** circumstance or event. It is often expressed as a combination of:
     the **adverse impacts that would arise if the circumstance or event occurs**,  and 
     the **likelihood** of occurrence. 
 
@@ -175,7 +175,7 @@ Risk treatment relates **to making decisions about the best actions to take rega
 
 ### Base Concepts
 
-* Mitigation: Taking action to prevent or reduce the impact of an event
+* Mitigation(緩解): Taking action to prevent or reduce the impact of an event
 * Acceptance: Ignoring the risks and continuing risky activities
 * Avoidance: Ceasing the risky activity to remove the likelihood that an event will occur
 * Vulnerability: An inherent weakness or flaw
@@ -235,6 +235,6 @@ When leaders and management implement the systems and structures that the organi
 * **Standards** are often used by governance teams to provide a framework to introduce policies and procedures in support of regulations.
 * **Regulations** are commonly issued in the form of laws, usually from government (not to be confused with governance) and typically carry financial penalties for noncompliance.
 
-Regulations -> Standards -> Policies -> Procedures
+Regulations (Laws) -> Standards -> Policies -> Procedures
 
 ## Module 5 Understand (ISC)² Code of Ethics

@@ -1,4 +1,4 @@
-# L2 Incident Response, Business Continuity and Disaster Recovery Concepts
+# Incident Response, Business Continuity and Disaster Recovery Concepts
 
 ## Introduction
 
@@ -14,7 +14,7 @@ Domain D2.3.1, D2.3.2, D2.3.3
 
 ### Incident Terminology
 
-* **Breach** (NIST SP 800-53 Rev. 5): The **loss of** control, compromise, unauthorized disclosure, unauthorized acquisition, or **any similar occurrence** where: **a person other than an authorized user accesses or potentially accesses personally identifiable information**; or an authorized user accesses personally identifiable information for other than an authorized purpose.
+* **Breach** 洩漏(NIST SP 800-53 Rev. 5): The **loss of** control, compromise, unauthorized disclosure, unauthorized acquisition, or **any similar occurrence** where: **a person other than an authorized user accesses or potentially accesses personally identifiable information**; or an authorized user accesses personally identifiable information for other than an authorized purpose.
 
 * **Event** (NIST SP 800-61 Rev 2): **Any observable occurrence** in a network or system.
 
@@ -22,7 +22,7 @@ Domain D2.3.1, D2.3.2, D2.3.3
 
 * **Incident**: **An event that actually or potentially jeopardizes** the confidentiality, integrity or availability of an information system or the information the system processes, stores or transmits.
 
-* **Intrusion** (IETF RFC 4949 Ver 2): A security event, or combination of events, that constitutes a deliberate security incident in which an intruder gains, or attempts to gain, access to a system or system resource without authorization.
+* **Intrusion** 入侵 (IETF RFC 4949 Ver 2): A security event, or combination of events, that constitutes a deliberate security incident in which an intruder gains, or attempts to gain, access to a system or system resource without authorization.
 
 * **Threat** (NIST SP 800-30 Rev 1): **Any circumstance or event with the potential to adversely impact organizational operations** (including mission, functions, image or reputation), organizational assets, individuals, other organizations or the nation through an information system via unauthorized access, destruction, disclosure, modification of information and/or denial of service.
 
@@ -89,7 +89,7 @@ The intent of a **business continuity plan** is **to sustain business operations
 
 ### How often should an organization test its business continuity plan (BCP)?
 
-Routinely. Each individual organization must determine how often to test its BCP, but it should be tested at predefined intervals as well as when significant changes happen within the business environment. 
+==Routinely==. Each individual organization must determine how often to test its BCP, but it should be tested at predefined intervals as well as when significant changes happen within the business environment. 
 
 ## Module 3: Understand Disaster Recovery (DR)
 
