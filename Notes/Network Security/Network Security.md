@@ -1,8 +1,7 @@
-# L4 Network Security
+# Network Security
+[TOC]
+## Computer Networking
 
-## Module 1: Understand Computer Networking
-
-Domain D4.1.1, D4.1.2
 
 ### What is Networking
 
@@ -19,13 +18,13 @@ There are two basic types of networks:
 
 #### Network Devices
 
-* **Hubs** are used to connect multiple devices in a network. They’re less likely to be seen in business or corporate networks than in home networks. Hubs are wired devices and are not as smart as switches or routers.
+* **Hubs** are used to connect multiple devices in a network. They’re less likely to be seen in business or corporate networks than in **home networks**. Hubs are **wired devices** and are **not as smart as switches or routers**.
 
 * You might consider using **a switch**, or what is also known as an intelligent hub. Switches are wired devices that know the addresses of the devices connected to them and route traffic to that port/device rather than retransmitting to all devices. Offering greater efficiency for traffic delivery and improving the overall throughput of data, switches are smarter than hubs, but not as smart as routers. Switches can also create separate broadcast domains when used to create VLANs, which will be discussed later.
 
-* **Routers** are used to control traffic flow on networks and are often used to connect similar networks and control traffic flow between them. Routers can be wired or wireless and can connect multiple switches. Smarter than hubs and switches, routers determine the most efficient “route” for the traffic to flow across the network.
+* **Routers** are used to control traffic flow on networks and are often used to connect similar networks and control traffic flow between them. Routers **can be wired or wireless** and can **connect multiple switches**. Smarter than hubs and switches, routers determine the most efficient “route” for the traffic to flow across the network.
 
-* **Firewalls** are essential tools in managing and controlling network traffic and protecting the network. A firewall is a network device used to filter traffic. It is typically deployed between a private network and the internet, but it can also be deployed between departments (segmented networks) within an organization (overall network). Firewalls filter traffic based on a defined set of rules, also called filters or access control lists.
+* **Firewalls** are essential tools in managing and controlling network traffic and protecting the network. A firewall is a network device used to filter traffic. It is typically **deployed between a private network and the internet**, but it can also be deployed between departments (segmented networks) within an organization (overall network). Firewalls filter traffic based on a defined set of rules, also called filters or access control lists.
 
 * A **server** is a computer that provides information to other computers on a network. Some common servers are web servers, email servers, print servers, database servers and file servers. All of these are, by design, networked and accessed in some way by a client computer. Servers are usually secured differently than workstations to protect the information they contain.
 
@@ -33,11 +32,11 @@ There are two basic types of networks:
 
 #### Other Networking Terms
 
-* Ethernet (IEEE 802.3) is a standard that defines wired connections of networked devices. This standard defines the way data is formatted over the wire to ensure disparate devices can communicate over the same cables.
+* **Ethernet** is a standard that defines wired connections of networked devices. This standard defines the way data is formatted over the wire to ensure disparate devices can communicate over the same cables.
 
-* Media Access Control (MAC) Address - Every network device is assigned a Media Access Control (MAC) address. An example is 00-13-02-1F-58-F5. The first 3 bytes (24 bits) of the address denote the vendor or manufacturer of the physical network interface. No two devices can have the same MAC address in the same local network; otherwise an address conflict occurs.
+* **Media Access Control (MAC) Address** - Every network device is assigned a Media Access Control (MAC) address. An example is 00-13-02-1F-58-F5. The first 3 bytes (24 bits) of the address denote the vendor or manufacturer of the physical network interface. **No two devices can have the same MAC address in the same local network**; otherwise an address conflict occurs.
 
-* Internet Protocol (IP) Address - While MAC addresses are generally assigned in the firmware of the interface, IP hosts associate that address with a unique logical address. This logical IP address represents the network interface within the network and can be useful to maintain communications when a physical device is swapped with new hardware. Examples are 192.168.1.1 and 2001:db8::ffff:0:1.
+* **Internet Protocol (IP) Address** - While MAC addresses are generally assigned in the firmware of the interface, IP hosts associate that address with a unique logical address. This logical IP address represents the network interface within the network and can be useful to maintain communications when a physical device is swapped with new hardware. Examples are 192.168.1.1 and 2001:db8::ffff:0:1.
 
 ### Networking Models
 
@@ -58,12 +57,12 @@ Those simple goals can be re-expressed in network (and security) terms such as:
 
 In the most basic form, a network model has at least two layers:
 
-* UPPER LAYER APPLICATION: also known as the host or application layer, is responsible for managing the integrity of a connection and controlling the session as well as establishing, maintaining and terminating communication sessions between two computers. It is also responsible for transforming data received from the Application Layer into a format that any system can understand. And finally, it allows applications to communicate and determines whether a remote communication partner is available and accessible.
+* **UPPER LAYER APPLICATION**: also known as the host or application layer, is responsible for managing the integrity of a connection and controlling the session as well as establishing, maintaining and terminating communication sessions between two computers. It is also responsible for transforming data received from the Application Layer into a format that any system can understand. And finally, it allows applications to communicate and determines whether a remote communication partner is available and accessible.
     * APPLICATION
         * APPLICATION 7
         * PRESENTATION 6
         * SESSION 5
-* LOWER LAYER: it is often referred to as the media or transport layer and is responsible for receiving bits from the physical connection medium and converting them into a frame. Frames are grouped into standardized sizes. Think of frames as a bucket and the bits as water. If the buckets are sized similarly and the water is contained within the buckets, the data can be transported in a controlled manner. Route data is added to the frames of data to create packets. In other words, a destination address is added to the bucket. Once we have the buckets sorted and ready to go, the host layer takes over.
+* **LOWER LAYER**: it is often referred to as the media or transport layer and is responsible for receiving bits from the physical connection medium and converting them into a frame. Frames are grouped into standardized sizes. Think of frames as a bucket and the bits as water. If the buckets are sized similarly and the water is contained within the buckets, the data can be transported in a controlled manner. Route data is added to the frames of data to create packets. In other words, a destination address is added to the bucket. Once we have the buckets sorted and ready to go, the host layer takes over.
     * DATA TRANSPORT
         * TRANSPORT 4
         * NETWORK 3
@@ -74,7 +73,7 @@ In the most basic form, a network model has at least two layers:
 
 The OSI Model was developed to establish a common way to describe the communication structure for interconnected computer systems. The OSI model serves as an abstract framework, or theoretical model, for how protocols should function in an ideal world, on ideal hardware. Thus, the OSI model has become a common conceptual reference that is used to understand the communication of various hierarchical components from software interfaces to physical hardware.
 
-The OSI model divides networking tasks into seven distinct layers. Each layer is responsible for performing specific tasks or operations with the goal of supporting data exchange (in other words, network communication) between two computers. The layers are interchangeably referenced by name or layer number. For example, Layer 3 is also known as the Network Layer. The layers are ordered specifically to indicate how information flows through the various levels of communication. Each layer communicates directly with the layer above and the layer below it. For example, Layer 3 communicates with both the Data Link (2) and Transport (4) layers.
+The [OSI](https://www.ithome.com.tw/tech/47085) model divides networking tasks into **seven distinct layers**. Each layer is responsible for performing specific tasks or operations with the goal of supporting data exchange (in other words, network communication) between two computers. The layers are interchangeably referenced by name or layer number. For example, Layer 3 is also known as the Network Layer. The layers are ordered specifically to indicate how information flows through the various levels of communication. Each layer communicates directly with the layer above and the layer below it. For example, Layer 3 communicates with both the Data Link (2) and Transport (4) layers.
 
 The Application, Presentation, and Session Layers (5-7) are commonly referred to simply as data. However, each layer has the potential to perform encapsulation (enforcement of data hiding and code hiding during all phases of software development and operational use. Bundling together data and methods is the process of encapsulation; its opposite process may be called unpacking, revealing, or using other terms. Also used to refer to taking any set of data and packaging it or hiding it in another data structure, as is common in network protocols and encryption.). Encapsulation is the addition of header and possibly a footer (trailer) data by a protocol used at that layer of the OSI model. Encapsulation is particularly important when discussing Transport, Network and Data Link layers (2-4), which all generally include some form of header. At the Physical Layer (1), the data unit is converted into binary, i.e., 01010111, and sent across physical wires such as an ethernet cable.  
 
@@ -88,19 +87,13 @@ Consider the following examples:
 * When discussing routers sending packets, we are discussing the Network Layer (3). 
 * When discussing switches, bridges or WAPs sending frames, we are discussing the Data Link Layer (2).
 
-Encapsulation occurs as the data moves down the OSI model from Application to Physical. As data is encapsulated at each descending layer, the previous layer’s header, payload and footer are all treated as the next layer’s payload. The data unit size increases as we move down the conceptual model and the contents continue to encapsulate.  
+**Encapsulation** occurs as the data moves down the OSI model **from Application to Physical**. As data is encapsulated at each descending layer, the previous layer’s header, payload and footer are all treated as the next layer’s payload. The data unit size increases as we move down the conceptual model and the contents continue to encapsulate.  
 
 The inverse action occurs as data moves up the OSI model layers from Physical to Application. This process is known as de-encapsulation  (or decapsulation). The header and footer are used to properly interpret the data payload and are then discarded. As we move up the OSI model, the data unit becomes smaller. The encapsulation/de-encapsulation process is best depicted visually below: 
 
-|            |             |              |                 |                |
-|------------|-------------|--------------|-----------------|----------------|
-| 7          | Application |              |        DATA     |                |
-| 6          | Presentation| Header -->   |      ||DATA     |                |
-| 5          | Session     |              |     |||DATA     |                |
-| 4          | Transport   |              |    ||||DATA     |                |
-| 3          | Network     |              |   |||||DATA     |                |
-| 2          | Data Link   |              |  ||||||DATA||   |   <-- Footer   |
-| 1          | Physical    |              | |||||||DATA|||  |                |
+![](https://hackmd.io/_uploads/B1J7MFaWa.png)
+[reference](https://www.techtarget.com/searchnetworking/tip/Intro-to-encapsulation-and-decapsulation-in-networking)
+
 
 ### Transmission Control Protocol/Internet Protocol (TCP/IP)
 
@@ -155,7 +148,7 @@ IPv6 is a modernization of IPv4, which addressed a number of weaknesse
     * Improved security:** IPsec is an optional part of IPv4 networks, but a mandatory component of IPv6 networks**. This will help ensure the integrity and confidentiality of IP packets and allow communicating partners **to authenticate with each other**.
     * Improved quality of service (QoS): This will help services obtain an appropriate share of a network’s bandwidth.
 
-An IPv6 address is shown as **8 groups of four digits**. Instead of numeric (0-9) digits like IPv4, **IPv6 addresses use the hexadecimal range (0000-ffff) and are separated by colons (:)** rather than periods (.). An example IPv6 address is **2001:0db8:0000:0000:0000:ffff:0000:0001**. To make it easier for humans to read and type, it can be shortened by removing the leading zeros at the beginning of each field and substituting two colons (::) for the longest consecutive zero fields. All fields must retain at least one digit. After shortening, the example address above is rendered as 2001:db8::ffff:0:1, which is much easier to type. As in IPv4, there are some addresses and ranges that are reserved for special uses:
+An IPv6 address is shown as **8 groups of four digits**. Instead of numeric (0-9) digits like IPv4, **IPv6 addresses use the hexadecimal range (0000-ffff) and are separated by colons (:)** rather than periods (.). An example IPv6 address is **2001:0db8:0000:0000:0000:ffff:0000:0001**. To make it easier for humans to read and type, it can be shortened by **removing the leading zeros at the beginning of each field and substituting two colons (::) for the longest consecutive zero fields**. All fields must retain at least one digit. After shortening, the example address above is rendered as 2001:db8::ffff:0:1, which is much easier to type. As in IPv4, there are some addresses and ranges that are reserved for special uses:
 
     * ::1 is the local loopback address, used the same as 127.0.0.1 in IPv4.
     * The range 2001:db8:: to 2001:db8:ffff:ffff:ffff:ffff:ffff:ffff is reserved for documentation use, just like in the examples above.
@@ -202,9 +195,7 @@ Some network protocols transmit information in clear text, meaning it is not enc
 
 ### SYN, SYN-ACK, ACK
 
-## Module 2 Understand Network (Cyber) Threats and Attacks
-
-Domain D4.1.2, D4.2.2, D4.2.3
+## Network (Cyber) Threats and Attacks
 
 ### Types of Threats
 
@@ -278,9 +269,7 @@ Here are some examples of steps that can be taken to protect networks.
 
 **Intrusion Prevention System (IPS)**: An intrusion prevention system (IPS) is a special type of active IDS **that automatically attempts to detect and block attacks before they reach target systems**. A distinguishing difference between an IDS and an IPS is that the **IPS is placed in line with the traffic**. In other words, **all traffic must pass through the IPS and the IPS can choose what traffic to forward and what traffic to block after analyzing it**. This allows the IPS to prevent an attack from reaching a target. Since IPS systems are most effective at preventing network-based attacks, it is common to see the IPS function integrated into firewalls. Just like IDS, there are Network-based IPS (NIPS) and Host-based IPS (HIPS).
 
-## Module 3 Understand Network Security Infrastructure
-
-Domain D4.3.1, D4.3.2
+## Network Security Infrastructure
 
 ### On-Premises Data Centers
 
@@ -453,3 +442,4 @@ A virtual private network (VPN) **is not necessarily an encrypted tunnel**. It i
 
 
 
+###### tags: `ISC2`
